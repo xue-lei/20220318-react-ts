@@ -1,8 +1,8 @@
 import 'react-vant/es/styles'
-import { FormI } from './view/form/index'
+import Layout from '@/view/layout/Layout'
 const App = () => {
   return (
-    <FormI/>
+    <Layout />
   )
 };
 export default App;
