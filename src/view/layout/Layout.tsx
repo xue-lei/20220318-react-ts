@@ -1,26 +1,22 @@
-import React, { type ReactElement } from 'react'
-import Home from '@/view/home/Home'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Routers } from '@/router/Router'
 import { Tabbar } from 'react-vant'
 import { FriendsO, HomeO, Search, SettingO } from '@react-vant/icons'
 interface LayoutPropsType {
   children?: string
 }
 const Layout: React.FC<LayoutPropsType> = ({ children }) => {
-  // 初始化组件集合
-  const components: Map<string, ReactElement> = new Map([
-    ['home', <Home />]
-  ])
-  // 当前组件
-  const [name, setName] = React.useState('home')
+  const [navName, setNavName] = useState("home")
   return (
     <>
-      {components.get(name)}
-      <Tabbar value={name} onChange={v => setName(v as string)}>
+      <Routers />
+      <Tabbar value={navName} onChange={name => setNavName(name as string)}>
         <Tabbar.Item name='home' icon={<HomeO />}>
-          主页
+          <Link to="/home">主页</Link>
         </Tabbar.Item>
         <Tabbar.Item name='search' icon={<Search />}>
-          搜索
+          <Link to="/search">搜索</Link>
         </Tabbar.Item>
         <Tabbar.Item name='firends' icon={<FriendsO />}>
           用户

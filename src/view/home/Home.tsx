@@ -143,7 +143,7 @@ const Home: React.FC<FormProps> = () => {
           },
         ]}
       >
-        <Uploader />
+        <Uploader previewSize={88} />
       </Form.Item>
       <Form.Item name='textarea' label='详细地址'>
         <Input.TextArea rows={3} autoSize maxLength={140} showWordLimit />

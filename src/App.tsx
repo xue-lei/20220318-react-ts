@@ -1,8 +1,10 @@
-import 'react-vant/es/styles'
 import Layout from '@/view/layout/Layout'
+import { BrowserRouter } from "react-router-dom";
 const App = () => {
   return (
-    <Layout />
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
   )
 };
 export default App;
