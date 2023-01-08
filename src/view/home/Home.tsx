@@ -16,10 +16,10 @@ import {
   Cell
 } from 'react-vant'
 import { CalendarValue } from 'react-vant/es/calendar/PropsType'
-export interface FormProps {
+export interface HomeProps {
 
 }
-const Home: React.FC<FormProps> = () => {
+const Home: React.FC<HomeProps> = () => {
   const [form] = Form.useForm()
 
   const onFinish = (values: any) => {
