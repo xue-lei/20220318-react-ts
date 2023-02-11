@@ -12,15 +12,19 @@ const routes: RouteObject[] = [
   },
   {
     path: '/search',
-    element: <div>12312313</div>
+    element: <>12312313</>
   },
 ]
 export const Routers: React.FC = () => {
-
-  const view: any = useRoutes(routes)
+  const view: React.ReactElement | null = useRoutes(routes)
+  console.log(view)
+  let isPass = true
+  if (view?.props.match.pathname === '/search') {
+    isPass = false
+  }
   return (
     <>
-      {view}
+      {isPass ? view : <div>503</div>}
     </>
   )
 }
