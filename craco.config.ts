@@ -1,5 +1,4 @@
-const path = require('path')
-const webpack = require('webpack')
+import path from 'path';
 export default {
   webpack: {
     alias: {
