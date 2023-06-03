@@ -3,10 +3,8 @@ import { Link } from 'react-router-dom'
 import { Routers } from '@/router/Router'
 import { Tabbar } from 'react-vant'
 import { FriendsO, HomeO, Search, SettingO } from '@react-vant/icons'
-interface LayoutPropsType {
-  children?: string
-}
-const Layout: React.FC<LayoutPropsType> = ({ children }) => {
+
+const Layout: React.FC = () => {
   const [navName, setNavName] = useState("home")
   return (
     <>
