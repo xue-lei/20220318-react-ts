@@ -17,7 +17,7 @@ const Layout: React.FC = () => {
           <Link to="/search">搜索</Link>
         </Tabbar.Item>
         <Tabbar.Item name='firends' icon={<FriendsO />}>
-          用户
+          <Link to="/shopping">用户</Link>
         </Tabbar.Item>
         <Tabbar.Item name='setting' icon={<SettingO />}>
           设置
